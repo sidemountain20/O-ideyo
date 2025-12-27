@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yorimichi - イベントを発見して参加しよう">
+    <title>ホーム - Yorimichi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=M+PLUS+1p:wght@400;500;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="ticket-icon"></div>
+                <span class="logo-text">Yorimichi</span>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#home">ホーム</a>
+                    <div class="nav-line"></div>
+                </li>
+                <li class="nav-item">
+                    <a href="#events">イベント</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#categories">カテゴリ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about">について</a>
+                </li>
+            </ul>
+
+            <!-- Action Buttons and Icons -->
+            <div class="nav-right">
+                <button class="btn-label">ログイン</button>
+                <div class="icon-buttons">
+                    <a href="#tickets" class="icon-btn tickets-btn">
+                        <div class="icon tickets-icon"></div>
+                        <span>チケット</span>
+                    </a>
+                    <a href="#interested" class="icon-btn interested-btn">
+                        <div class="icon star-icon-btn"></div>
+                        <span>興味あり</span>
+                    </a>
+                    <a href="#profile" class="icon-btn profile-btn">
+                        <div class="icon profile-icon-btn"></div>
+                        <span>プロフィール</span>
+                        <div class="dropdown-arrow-icon"></div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">素晴らしいイベントを見つけよう</h1>
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <div class="search-events">
+                    <div class="search-icon"></div>
+                    <input type="text" placeholder="イベント、カテゴリ、場所を検索..." class="search-input">
+                </div>
+                <div class="location-dropdown">
+                    <div class="location-icon"></div>
+                    <span class="location-text">東京</span>
+                    <div class="dropdown-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <h2 class="section-title">カテゴリを探す</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">カテゴリ 1</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">カテゴリ 2</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">カテゴリ 3</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">カテゴリ 4</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">カテゴリ 5</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">カテゴリ 6</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Events Section -->
+    <section class="popular-events">
+        <h2 class="section-title">東京で人気のイベント</h2>
+        
+        <!-- Day Filter Chips -->
+        <div class="day-chips">
+            <button class="chip">15</button>
+            <button class="chip">16</button>
+            <button class="chip">今週</button>
+            <button class="chip">今月</button>
+            <button class="chip">カスタム</button>
+        </div>
+
+        <!-- Event Cards -->
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat event cards (5 more) -->
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-more">もっと見る</button>
+    </section>
+
+    <!-- Personalized Recommendations -->
+    <section class="recommendations">
+        <h2 class="recommendations-title">あなた専用に厳選されたイベント！</h2>
+        <p class="recommendations-subtitle">あなたの興味に合わせたイベントをおすすめします！お気に入りのイベントを見逃さないでください。</p>
+        <button class="btn-get-started">
+            <span>始める</span>
+            <div class="event-icon"></div>
+        </button>
+    </section>
+
+    <!-- Discover Best of Online Events -->
+    <section class="online-events">
+        <h2 class="section-title">人気のオンラインイベントを発見</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">オンライン</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat event cards (5 more) -->
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">オンライン</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">オンライン</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">オンライン</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">オンライン</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">オンライン</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-more">もっと見る</button>
+    </section>
+
+    <!-- Trending Events Section -->
+    <section class="trending-events">
+        <h2 class="section-title">世界で人気のイベント</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">無料</div>
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat event cards with FREE badge (5 more) -->
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">無料</div>
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">無料</div>
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">無料</div>
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">無料</div>
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">無料</div>
+                    <button class="event-interested-btn"></button>
+                </div>
+                <div class="event-category">テクノロジー・イノベーション</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">11月</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">イベントタイトル（最大2行まで表示）</h3>
+                        <p class="event-venue">会場名</p>
+                        <p class="event-time">10:00 - 18:00</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>¥500</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10人が興味あり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-more">もっと見る</button>
+    </section>
+
+    <!-- Create Event CTA -->
+    <section class="create-event-cta">
+        <h2 class="cta-title">Yorimichiでイベントを作る</h2>
+        <p class="cta-subtitle">ショー、イベント、アクティビティ、素晴らしい体験をお持ちですか？私たちとパートナーシップを結び、Yorimichiに掲載しましょう</p>
+        <button class="btn-create-event">
+            <div class="event-add-icon"></div>
+            <span>イベントを作成</span>
+        </button>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">ニュースレターを購読</h2>
+            <p class="newsletter-subtitle">お気に入りの主催者や会場からの新しいイベントを含む週次ニュースレターとアップデートを受け取りましょう。</p>
+        </div>
+        <div class="newsletter-subscribe">
+            <input type="email" placeholder="メールアドレスを入力してください" class="newsletter-input">
+            <button class="newsletter-submit-btn">購読</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">会社情報</h3>
+                <ul class="footer-links">
+                    <li><a href="#">私たちについて</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">採用情報</a></li>
+                    <li><a href="#">よくある質問</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">ヘルプ</h3>
+                <ul class="footer-links">
+                    <li><a href="#">アカウントサポート</a></li>
+                    <li><a href="#">イベントの掲載</a></li>
+                    <li><a href="#">イベントチケッティング</a></li>
+                    <li><a href="#">チケット購入規約</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">カテゴリ</h3>
+                <ul class="footer-links">
+                    <li><a href="#">コンサート・ライブ</a></li>
+                    <li><a href="#">フェスティバル・ライフスタイル</a></li>
+                    <li><a href="#">ビジネス・ネットワーキング</a></li>
+                    <li><a href="#">飲食</a></li>
+                    <li><a href="#">パフォーマンスアート</a></li>
+                    <li><a href="#">スポーツ・アウトドア</a></li>
+                    <li><a href="#">展示会</a></li>
+                    <li><a href="#">ワークショップ・カンファレンス・クラス</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">フォローする</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">アプリをダウンロード</h3>
+                <div class="app-download">
+                    <a href="#" class="app-link">
+                        <div class="app-icon google-play"></div>
+                        <div class="app-text">
+                            <span>Google Playで</span>
+                            <span>今すぐダウンロード</span>
+                        </div>
+                    </a>
+                    <a href="#" class="app-link">
+                        <div class="app-icon app-store"></div>
+                        <div class="app-text">
+                            <span>App Storeで</span>
+                            <span>今すぐダウンロード</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-line"></div>
+        <div class="footer-copyright">
+            <span class="copyright-icon"></span>
+            <span>2023 Yorimichi. 無断転載を禁じます。</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
