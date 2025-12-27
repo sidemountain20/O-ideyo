@@ -1,0 +1,378 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    position: relative;
+    width: 100%;
+    min-height: 1080px;
+    background: #018749;
+    overflow-x: hidden;
+}
+
+/* Left Side - Logo and Promotional Text */
+.left-side {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 1154px);
+    height: 1080px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 215.55px;
+    height: 48px;
+    margin-bottom: 128px;
+}
+
+.ticket-icon {
+    width: 58.38px;
+    height: 40px;
+    background: #FFE047;
+    transform: rotate(-8.15deg);
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-family: 'Lalezar', cursive;
+    font-size: 42px;
+    line-height: 66px;
+    color: #FFE047;
+}
+
+.promotional-text {
+    width: 619px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 70px;
+    color: #FFFFFF;
+    margin-top: 128px;
+}
+
+/* Right Side - Sign Up Form */
+.right-side {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1154px;
+    height: 1080px;
+    background: #FFFFFF;
+    border-radius: 70px 0px 0px 70px;
+}
+
+.create-account-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 101px 202px;
+}
+
+.page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    color: #018749;
+    margin-bottom: 60px;
+}
+
+.signup-form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 750px;
+}
+
+/* Social Sign Up Buttons */
+.social-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 58px;
+    width: 100%;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 346px;
+    height: 74px;
+    background: #FFFFFF;
+    border: 1px solid #A3A3A3;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #018749;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    border-color: #018749;
+    background: #f5f5f5;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+}
+
+.google-icon {
+    background: linear-gradient(to bottom right, #4285F4 0%, #4285F4 25%, #EA4335 25%, #EA4335 50%, #FBBC05 50%, #FBBC05 75%, #34A853 75%);
+    position: relative;
+}
+
+.google-icon::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.facebook-icon {
+    background: #039BE5;
+    position: relative;
+}
+
+.facebook-icon::after {
+    content: 'f';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* OR Divider */
+.or-divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    border: 1px solid rgba(111, 111, 111, 0.3);
+}
+
+.or-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #A3A3A3;
+    width: 34px;
+    text-align: center;
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-field label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #636363;
+}
+
+.input-field input {
+    box-sizing: border-box;
+    width: 750px;
+    height: 74px;
+    padding: 0 26px;
+    background: #FFFFFF;
+    border: 1px solid rgba(130, 130, 130, 0.7);
+    border-radius: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #2B293D;
+    outline: none;
+}
+
+.input-field input::placeholder {
+    color: #ACACAC;
+}
+
+.input-field input:focus {
+    border-color: #018749;
+}
+
+/* Password Input Wrapper */
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-input-wrapper input {
+    padding-right: 70px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-icon {
+    width: 32px;
+    height: 22px;
+    background: #A4A4A4;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%, 0 0, 20% 20%, 80% 20%, 80% 30%, 20% 30%, 20% 40%, 80% 40%, 80% 50%, 20% 50%);
+}
+
+/* Create Account Button */
+.create-account-btn {
+    width: 750px;
+    height: 74px;
+    background: #018749;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.create-account-btn:hover {
+    background: #016a3a;
+}
+
+.create-account-btn:active {
+    background: #015d33;
+}
+
+/* Log In Link */
+.login-link {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #636363;
+    text-align: center;
+}
+
+.login-link a {
+    color: #018749;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1920px) {
+    .left-side {
+        width: calc(50% - 577px);
+    }
+    
+    .right-side {
+        width: calc(50% + 577px);
+    }
+    
+    .promotional-text {
+        width: 100%;
+        max-width: 619px;
+        font-size: 36px;
+        line-height: 52px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .left-side {
+        display: none;
+    }
+    
+    .right-side {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .create-account-container {
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .signup-form-section {
+        width: 100%;
+        max-width: 750px;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .social-btn {
+        width: 100%;
+    }
+    
+    .input-field input,
+    .create-account-btn {
+        width: 100%;
+    }
+}
+

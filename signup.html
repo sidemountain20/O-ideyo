@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yorimichi - アカウント作成">
+    <title>アカウント作成 - Yorimichi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=M+PLUS+1p:wght@400;500;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Left side - Logo and Promotional Text -->
+    <div class="left-side">
+        <div class="logo">
+            <div class="ticket-icon"></div>
+            <span class="logo-text">Yorimichi</span>
+        </div>
+        <h2 class="promotional-text">あなたにぴったりのイベントを見つけましょう。今日からパーソナライズされたおすすめを利用できます！</h2>
+    </div>
+
+    <!-- Right side - Sign Up Form -->
+    <div class="right-side">
+        <div class="create-account-container">
+            <h1 class="page-title">アカウント作成</h1>
+
+            <div class="signup-form-section">
+                <!-- Social Sign Up Buttons -->
+                <div class="social-buttons">
+                    <button class="social-btn google-btn">
+                        <div class="social-icon google-icon"></div>
+                        <span>Googleでサインアップ</span>
+                    </button>
+                    <button class="social-btn facebook-btn">
+                        <div class="social-icon facebook-icon"></div>
+                        <span>Facebookでサインアップ</span>
+                    </button>
+                </div>
+
+                <!-- OR Divider -->
+                <div class="or-divider">
+                    <div class="divider-line"></div>
+                    <span class="or-text">または</span>
+                    <div class="divider-line"></div>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="form-section">
+                    <form class="signup-form">
+                        <!-- Full Name Input -->
+                        <div class="input-field">
+                            <label for="fullname">お名前</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="お名前を入力してください" required>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="input-field">
+                            <label for="email">メールアドレス</label>
+                            <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" required>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="input-field">
+                            <label for="password">パスワード</label>
+                            <div class="password-input-wrapper">
+                                <input type="password" id="password" name="password" placeholder="パスワードを入力してください" required>
+                                <button type="button" class="toggle-password" aria-label="パスワードを表示/非表示">
+                                    <div class="eye-icon"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Create Account Button -->
+                        <button type="submit" class="create-account-btn">アカウントを作成</button>
+                    </form>
+
+                    <!-- Log In Link -->
+                    <p class="login-link">
+                        既にアカウントをお持ちですか？ <a href="login.html">ログイン</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password visibility toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.querySelector('.toggle-password');
+            const passwordInput = document.getElementById('password');
+            
+            if (togglePassword && passwordInput) {
+                togglePassword.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    this.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

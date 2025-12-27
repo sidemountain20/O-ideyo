@@ -133,6 +133,7 @@ body {
     cursor: pointer;
     width: 160px;
     height: 56px;
+    text-decoration: none;
 }
 
 /* Hero Section */
