@@ -3,115 +3,747 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="O-ideyo - モダンなウェブサイト">
-    <title>O-ideyo</title>
+    <meta name="description" content="Eventify - イベントを発見して参加しよう">
+    <title>Eventify - イベント管理プラットフォーム</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&family=M+PLUS+1p:wght@400;500;700&family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header class="header">
         <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <h1>O-ideyo</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">ホーム</a></li>
-                    <li><a href="#about">について</a></li>
-                    <li><a href="#services">サービス</a></li>
-                    <li><a href="#contact">お問い合わせ</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <!-- Logo -->
+            <div class="logo">
+                <div class="ticket-icon"></div>
+                <span class="logo-text">Eventify</span>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#home">ホーム</a>
+                    <div class="nav-line"></div>
+                </li>
+                <li class="nav-item">
+                    <a href="#events">イベント</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#categories">カテゴリ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about">について</a>
+                </li>
+            </ul>
+
+            <!-- Action Buttons -->
+            <div class="nav-actions">
+                <button class="btn-label">ログイン</button>
+                <button class="btn-signup">Sign Up</button>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h2>ようこそ O-ideyo へ</h2>
-                    <p>モダンで美しいウェブサイト体験を提供します</p>
-                    <button class="cta-button">始める</button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Some promotional message.</h1>
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <div class="search-events">
+                    <div class="search-icon"></div>
+                    <input type="text" placeholder="Search Events, Categories, Location,..." class="search-input">
+                </div>
+                <div class="location-dropdown">
+                    <div class="location-icon"></div>
+                    <span class="location-text">Mumbai</span>
+                    <div class="dropdown-arrow"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>私たちについて</h2>
-                <div class="about-grid">
-                    <div class="about-card">
-                        <h3>ビジョン</h3>
-                        <p>革新的なソリューションを通じて、より良い未来を創造します。</p>
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <h2 class="section-title">カテゴリを検索する</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">Category 1</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">Category 2</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">Category 3</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">Category 4</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">Category 5</p>
+            </div>
+            <div class="category-card">
+                <div class="category-image"></div>
+                <p class="category-label">Category 6</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Events Section -->
+    <section class="popular-events">
+        <h2 class="section-title">東京で人気のイベント</h2>
+        
+        <!-- Day Filter Chips -->
+        <div class="day-chips">
+            <button class="chip">今日</button>
+            <button class="chip">明日</button>
+            <button class="chip">今週</button>
+            <button class="chip">今月</button>
+            <button class="chip">カスタム</button>
+        </div>
+
+        <!-- Event Cards -->
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
                     </div>
-                    <div class="about-card">
-                        <h3>ミッション</h3>
-                        <p>ユーザー中心の設計と高品質なサービスを提供します。</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>価値</h3>
-                        <p>誠実さ、革新性、そして卓越性を大切にしています。</p>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <h2>サービス</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🚀</div>
-                        <h3>高速開発</h3>
-                        <p>最新の技術スタックを使用した迅速な開発プロセス</p>
+            <!-- Repeat event cards -->
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🎨</div>
-                        <h3>美しいデザイン</h3>
-                        <p>モダンで使いやすいインターフェースの設計</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📱</div>
-                        <h3>レスポンシブ対応</h3>
-                        <p>あらゆるデバイスで完璧に動作する設計</p>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>お問い合わせ</h2>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">お名前</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">メッセージ</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">送信</button>
-                </form>
+                </div>
             </div>
-        </section>
-    </main>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 O-ideyo. All rights reserved.</p>
+        <button class="btn-more">もっと見る</button>
+    </section>
+
+    <!-- Personalized Recommendations -->
+    <section class="recommendations">
+        <h2 class="recommendations-title">あなたにおすすめのイベント</h2>
+        <p class="recommendations-subtitle">Get event suggestions tailored to your interests! Don't let your favorite events slip away.</p>
+        <button class="btn-get-started">
+            <span>Get Started</span>
+            <div class="event-icon"></div>
+        </button>
+    </section>
+
+    <!-- Online Events Section -->
+    <section class="online-events">
+        <h2 class="section-title">人気のオンラインイベント</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Online</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat event cards -->
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Online</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Online</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Online</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Online</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Online</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-more">もっと見る</button>
+    </section>
+
+    <!-- Trending Events Section -->
+    <section class="trending-events">
+        <h2 class="section-title">世界で人気のイベント</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">FREE</div>
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat event cards with FREE badge -->
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">FREE</div>
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">FREE</div>
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">FREE</div>
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">FREE</div>
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-image">
+                    <div class="ticket-fee">FREE</div>
+                    <button class="interested-btn"></button>
+                </div>
+                <div class="event-category">Technology & Innovation</div>
+                <div class="event-details">
+                    <div class="event-date">
+                        <div class="date-month">NOV</div>
+                        <div class="date-day">22</div>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-title">Event title that can go up to two lines</h3>
+                        <p class="event-venue">Venue</p>
+                        <p class="event-time">00:00 AM - 00:00 PM</p>
+                        <div class="event-meta">
+                            <div class="ticket-price">
+                                <span class="ticket-icon"></span>
+                                <span>INR 499</span>
+                            </div>
+                            <span class="meta-separator"></span>
+                            <div class="interested-count">
+                                <span class="star-icon"></span>
+                                <span>10 interested</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-more">もっと見る</button>
+    </section>
+
+    <!-- Create Event CTA -->
+    <section class="create-event-cta">
+        <h2 class="cta-title">Yorimichiでイベントを作る</h2>
+        <p class="cta-subtitle">Got a show, event, activity or a great experience? Partner with us & get listed on Eventify</p>
+        <button class="btn-create-event">
+            <div class="event-add-icon"></div>
+            <span>Create Event</span>
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Company Info</h3>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Help</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Account Support</a></li>
+                    <li><a href="#">Listing Events</a></li>
+                    <li><a href="#">Event Ticketing</a></li>
+                    <li><a href="#">Ticket Purchase Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Concerts & Gigs</a></li>
+                    <li><a href="#">Festivals & Lifestyle</a></li>
+                    <li><a href="#">Business & Networking</a></li>
+                    <li><a href="#">Food & Drinks</a></li>
+                    <li><a href="#">Performing Arts</a></li>
+                    <li><a href="#">Sports & Outdoors</a></li>
+                    <li><a href="#">Exhibitions</a></li>
+                    <li><a href="#">Workshops, Conferences & Classes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Follow Us</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Youtube</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Download The App</h3>
+                <div class="app-download">
+                    <a href="#" class="app-link">
+                        <div class="app-icon google-play"></div>
+                        <div class="app-text">
+                            <span>Get it on</span>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="#" class="app-link">
+                        <div class="app-icon app-store"></div>
+                        <div class="app-text">
+                            <span>Download on the</span>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-line"></div>
+        <div class="footer-copyright">
+            <span class="copyright-icon"></span>
+            <span>2023 Eventify. All rights reserved.</span>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
